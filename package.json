@@ -1,0 +1,29 @@
+{
+  "name": "astroproxy-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "imports": {
+    "#src/*": "./dist/*"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "startTs": "ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IvanMMM/astroproxy-node-api.git"
+  },
+  "keywords": [],
+  "author": "BadVolt",
+  "license": "ISC",
+  "dependencies": {
+    "got": "^12.5.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.1"
+  }
+}
