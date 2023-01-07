@@ -35,7 +35,7 @@ export class Port implements Ports.get.Port {
   }
 
   get httpUrl() {
-    const url = new URL(`https://${this.node.ip}`);
+    const url = new URL(`http://${this.node.ip}`);
     url.port = this.ports.http.toString();
     if (this.access.login) {
       url.username = this.access.login;
@@ -46,15 +46,16 @@ export class Port implements Ports.get.Port {
     return url;
   }
 
+  get httpsUrl() {
+    const url = this.httpUrl;
+    url.protocol = "https";
+    return url;
+  }
+
   get socksUrl() {
-    const url = new URL(`socks://${this.node.ip}`);
+    const url = this.httpUrl;
+    url.protocol = "socks";
     url.port = this.ports.socks.toString();
-    if (this.access.login) {
-      url.username = this.access.login;
-    }
-    if (this.access.password) {
-      url.password = this.access.password;
-    }
     return url;
   }
 
