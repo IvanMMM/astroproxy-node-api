@@ -33,4 +33,37 @@ export class Port implements Ports.get.Port {
   async newIp() {
     return await this.astroproxy.newipPort({ id: this.id });
   }
+
+  get httpUrl() {
+    const url = new URL(`https://${this.node.ip}`);
+    url.port = this.ports.http.toString();
+    if (this.access.login) {
+      url.username = this.access.login;
+    }
+    if (this.access.password) {
+      url.password = this.access.password;
+    }
+    return url;
+  }
+
+  get socksUrl() {
+    const url = new URL(`socks://${this.node.ip}`);
+    url.port = this.ports.socks.toString();
+    if (this.access.login) {
+      url.username = this.access.login;
+    }
+    if (this.access.password) {
+      url.password = this.access.password;
+    }
+    return url;
+  }
+
+  get changeIpUrl() {
+    const url = this.httpUrl;
+    url.password = "";
+    url.username = "";
+    url.pathname = "api/changeIP";
+    url.search = `apiToken=${this.astroproxy.apiKey}`;
+    return url;
+  }
 }

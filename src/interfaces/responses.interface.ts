@@ -23,8 +23,8 @@ export interface PortsData {
 }
 
 export interface Access {
-  login: string;
-  password: string;
+  login?: string;
+  password?: string;
   ip?: string;
 }
 

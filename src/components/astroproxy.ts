@@ -9,7 +9,7 @@ type pageInfo = Omit<Ports.get.RootObject, "data" | "status">;
 
 export class Astroproxy {
   private got: Got;
-  constructor(apiKey: string) {
+  constructor(public readonly apiKey: string) {
     if (!apiKey) {
       throw new ApiTokenMissing();
     }
