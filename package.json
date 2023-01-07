@@ -10,7 +10,6 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
-    "startTs": "ts-node src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
