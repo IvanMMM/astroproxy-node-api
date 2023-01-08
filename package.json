@@ -1,6 +1,6 @@
 {
   "name": "astroproxy-api",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "",
   "main": "dist/index.js",
   "type": "module",
@@ -18,7 +18,11 @@
     "type": "git",
     "url": "https://github.com/IvanMMM/astroproxy-node-api.git"
   },
-  "keywords": ["astroproxy", "proxy", "api"],
+  "keywords": [
+    "astroproxy",
+    "proxy",
+    "api"
+  ],
   "author": "BadVolt",
   "license": "ISC",
   "dependencies": {
