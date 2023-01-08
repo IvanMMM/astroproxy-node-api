@@ -1,4 +1,5 @@
 /src/
 /node_modules/
+/docs/
 /dist/test.js
 /dist/test.d.ts

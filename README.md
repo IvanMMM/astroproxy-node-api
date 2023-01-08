@@ -1,9 +1,10 @@
 # Astroproxy API
-
 This is unofficial ESM API wrapper for https://astroproxy.com/ written on Typescript.
 
-## Basic usage
+## Documentation
+Typescript documentation is available [here](https://ivanmmm.github.io/astroproxy-node-api/)
 
+## Basic usage
 ```
 const astroproxyApi = new Astroproxy("YOUR_API_KEY");
 
