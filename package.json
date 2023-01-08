@@ -18,7 +18,7 @@
     "type": "git",
     "url": "https://github.com/IvanMMM/astroproxy-node-api.git"
   },
-  "keywords": [],
+  "keywords": ["astroproxy", "proxy", "api"],
   "author": "BadVolt",
   "license": "ISC",
   "dependencies": {
